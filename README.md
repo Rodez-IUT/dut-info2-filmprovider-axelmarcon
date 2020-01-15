@@ -1,7 +1,7 @@
 # DUT Info2 - FilmProvider
 
-### NOM : DOE
-### Prénom : John
+### NOM : MARCON
+### Prénom : Axel
 ### Groupe de TP : 
 - [x] 1
 
