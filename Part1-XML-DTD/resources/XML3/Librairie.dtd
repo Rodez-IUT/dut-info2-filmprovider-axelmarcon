@@ -1,0 +1,14 @@
+<!ELEMENT librairie (en-tete, livre+) >
+
+<!ELEMENT en-tete (strong*, em*, img*) >
+<!ELEMENT strong (#PCDATA) >
+<!ELEMENT em (#PCDATA) >
+<!ELEMENT img (#PCDATA) >
+<!ATTLIST img src CDATA #REQUIRED
+              title CDATA #IMPLIED
+>
+
+<!ELEMENT livre (titre, auteur+, description, prix) >
+<!ATTLIST livre ISBN (#PCDATA) >
+<!ELEMENT titre (#PCDATA) >
+<!ELEMENT auteur (#PCDATA) >
