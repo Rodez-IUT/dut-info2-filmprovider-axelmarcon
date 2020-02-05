@@ -22,7 +22,7 @@
                     <xsl:for-each select="film">
                         <tr>
                             <td><xsl:value-of select="titre"/></td>
-                            <td><xsl:value-of select='resume/image/@source'/></td>
+                            <td><xsl:value-of select="resume/image/@source"/></td>
                             <td><xsl:value-of select="resume/text"/></td>
                         </tr>
                     </xsl:for-each>
