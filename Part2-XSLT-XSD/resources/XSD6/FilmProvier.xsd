@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="films">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="1" maxOccurs="unbounded">
+                    <xs:element ref="realisateur"/>
+                    <xs:element ref="film"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="realisateur">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="prenom"/>
+                <xs:element ref="nom"/>
+            </xs:sequence>
+            <xs:attribute name="id_realisateur" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="prenom" type="xs:string"/>
+    <xs:element name="nom" type="xs:string"/>
+
+    <xs:element name="film">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="titre"/>
+                <xs:element ref="resume"/>
+            </xs:sequence>
+            <xs:attribute name="id_film" type="xs:string"/>
+            <xs:attribute name="id_realisateur" type="xs:string"/>
+            <xs:attribute name="annee" type="xs:integer"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="titre" type="xs:string"/>
+    <xs:element name="resume">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:choice minOccurs="0" maxOccurs="1">
+                    <xs:element ref="image"/>
+                </xs:choice>
+                <xs:element ref="text"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="image">
+        <xs:complexType>
+            <xs:attribute name="source" type="xs:string"/>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="text" type="xs:string"/>
+
+</xs:schema>
